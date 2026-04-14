@@ -1,0 +1,198 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>M-Tech - Learning Hub</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../CSS/MTech.css">    <link rel="stylesheet" href="../CSS/index.css">
+</head>
+
+<body class="page-body">
+        <header>
+        <div class="logo-section">
+            <div class="logo">
+                <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect width="40" height="40" rx="8" fill="#5b9cff"/>
+                    <path d="M10 15h20v2H10v-2zm0 4h20v2H10v-2zm0 4h12v2H10v-2z" fill="white"/>
+                    <circle cx="30" cy="25" r="3" fill="white"/>
+                </svg>
+            </div>
+            <h1>Learning Hub</h1>
+        </div>
+        <nav>
+            <div class="search-bar">
+                <input type="text" id="searchInput" placeholder="Search courses..." />
+                <button id="searchBtn">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/>
+                    </svg>
+                </button>
+            </div>
+            <button id="darkModeToggle" class="nav-icon">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M12 2.25a.75.75 0 01.75.75v2.25a.75.75 0 01-1.5 0V3a.75.75 0 01.75-.75zM7.5 12a4.5 4.5 0 119 0 4.5 4.5 0 01-9 0zM18.894 6.166a.75.75 0 00-1.06-1.06l-1.591 1.59a.75.75 0 101.06 1.061l1.59-1.59zM21.75 12a.75.75 0 01-.75.75h-2.25a.75.75 0 010-1.5H21a.75.75 0 01.75.75zM17.834 18.894a.75.75 0 001.06-1.06l-1.59-1.591a.75.75 0 10-1.061 1.06l1.59 1.591zM12 18a.75.75 0 01.75.75V21a.75.75 0 01-1.5 0v-2.25A.75.75 0 0112 18zM7.758 17.303a.75.75 0 00-1.061-1.06l-1.591 1.59a.75.75 0 001.06 1.061l1.591-1.59zM6 12a.75.75 0 01-.75.75H3a.75.75 0 010-1.5h2.25A.75.75 0 016 12zM6.697 7.757a.75.75 0 001.06-1.06l-1.59-1.591a.75.75 0 00-1.061 1.06l1.591 1.59z"/>
+                </svg>
+                Dark Mode
+            </button>
+            <a href="../index.html" class="nav-icon">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/>
+                </svg> Home
+            </a>
+            <a href="SignInOut.html" class="nav-icon">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/>
+                    <circle cx="12" cy="7" r="4"/>
+                </svg> Sign In/Out
+            </a>
+            <a href="Login.html" class="nav-icon">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <rect x="3" y="11" width="18" height="11" rx="2" ry="2"/>
+                    <circle cx="12" cy="16" r="1"/>
+                    <path d="m9 11 3-3 3 3"/>
+                </svg> Login
+            </a>
+            <a href="about.html" class="nav-icon">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M13 9H11V7H13M13 17H11V11H13M12 2A10 10 0 0 0 2 12A10 10 0 0 0 12 22A10 10 0 0 0 22 12A10 10 0 0 0 12 2Z"/>
+                </svg> About
+            </a>
+        </nav>
+    </header>
+    <main>
+        <h2>M-Tech Subjects</h2>
+
+        <!-- Semester 1 -->
+        <div class="semester">
+            <h3>Semester 1</h3>
+            <div class="subjects">
+
+                <div class="subject-box">
+                    <p>Advanced Data Structures</p>
+                    <input type="file" id="upload1"><button onclick="uploadFile('upload1','list1')">Upload PDF</button>
+                    <ul id="list1"></ul>
+                </div>
+
+                <div class="subject-box">
+                    <p>Advanced Algorithms</p>
+                    <input type="file" id="upload2"><button onclick="uploadFile('upload2','list2')">Upload PDF</button>
+                    <ul id="list2"></ul>
+                </div>
+
+                <div class="subject-box">
+                    <p>Advanced Operating Systems</p>
+                    <input type="file" id="upload3"><button onclick="uploadFile('upload3','list3')">Upload PDF</button>
+                    <ul id="list3"></ul>
+                </div>
+
+                <div class="subject-box">
+                    <p>Advanced Database Systems</p>
+                    <input type="file" id="upload4"><button onclick="uploadFile('upload4','list4')">Upload PDF</button>
+                    <ul id="list4"></ul>
+                </div>
+
+                <div class="subject-box">
+                    <p>Research Methodology</p>
+                    <input type="file" id="upload5"><button onclick="uploadFile('upload5','list5')">Upload PDF</button>
+                    <ul id="list5"></ul>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- Semester 2 -->
+        <div class="semester">
+            <h3>Semester 2</h3>
+            <div class="subjects">
+
+                <div class="subject-box">
+                    <p>Machine Learning</p>
+                    <input type="file" id="upload6"><button onclick="uploadFile('upload6','list6')">Upload PDF</button>
+                    <ul id="list6"></ul>
+                </div>
+
+                <div class="subject-box">
+                    <p>Artificial Intelligence</p>
+                    <input type="file" id="upload7"><button onclick="uploadFile('upload7','list7')">Upload PDF</button>
+                    <ul id="list7"></ul>
+                </div>
+
+                <div class="subject-box">
+                    <p>Cloud Computing</p>
+                    <input type="file" id="upload8"><button onclick="uploadFile('upload8','list8')">Upload PDF</button>
+                    <ul id="list8"></ul>
+                </div>
+
+                <div class="subject-box">
+                    <p>Cyber Security</p>
+                    <input type="file" id="upload9"><button onclick="uploadFile('upload9','list9')">Upload PDF</button>
+                    <ul id="list9"></ul>
+                </div>
+
+                <div class="subject-box">
+                    <p>Big Data Analytics</p>
+                    <input type="file" id="upload10"><button onclick="uploadFile('upload10','list10')">Upload PDF</button>
+                    <ul id="list10"></ul>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- Semester 3 -->
+        <div class="semester">
+            <h3>Semester 3</h3>
+            <div class="subjects">
+
+                <div class="subject-box">
+                    <p>Internet of Things</p>
+                    <input type="file" id="upload11"><button onclick="uploadFile('upload11','list11')">Upload PDF</button>
+                    <ul id="list11"></ul>
+                </div>
+
+                <div class="subject-box">
+                    <p>Deep Learning</p>
+                    <input type="file" id="upload12"><button onclick="uploadFile('upload12','list12')">Upload PDF</button>
+                    <ul id="list12"></ul>
+                </div>
+
+                <div class="subject-box">
+                    <p>Natural Language Processing</p>
+                    <input type="file" id="upload13"><button onclick="uploadFile('upload13','list13')">Upload PDF</button>
+                    <ul id="list13"></ul>
+                </div>
+
+                <div class="subject-box">
+                    <p>Elective Subject</p>
+                    <input type="file" id="upload14"><button onclick="uploadFile('upload14','list14')">Upload PDF</button>
+                    <ul id="list14"></ul>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- Semester 4 -->
+        <div class="semester">
+            <h3>Semester 4</h3>
+            <div class="subjects">
+
+                <div class="subject-box">
+                    <p>Dissertation / Thesis</p>
+                    <input type="file" id="upload15"><button onclick="uploadFile('upload15','list15')">Upload PDF</button>
+                    <ul id="list15"></ul>
+                </div>
+
+                <div class="subject-box">
+                    <p>Project Work</p>
+                    <input type="file" id="upload16"><button onclick="uploadFile('upload16','list16')">Upload PDF</button>
+                    <ul id="list16"></ul>
+                </div>
+
+            </div>
+        </div>
+
+    </main>
+    <script src="../JS/upload.js"></script>
+</body>
+
+</html>
+

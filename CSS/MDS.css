@@ -1,0 +1,234 @@
+/* Modern Learning Hub shared style */
+
+:root {
+    color-scheme: dark;
+    --bg: #071126;
+    --surface: #111d3f;
+    --surface-alt: #15254f;
+    --surface-strong: #1c2c53;
+    --text: #e8eef8;
+    --muted: #a6b5d8;
+    --border: rgba(255, 255, 255, 0.08);
+    --accent: #5b9cff;
+    --accent-soft: rgba(91, 156, 255, 0.16);
+    --shadow: 0 24px 80px rgba(0, 0, 0, 0.18);
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    font-family: 'Inter', 'Segoe UI', sans-serif;
+    background: radial-gradient(circle at top left, rgba(91, 156, 255, 0.18), transparent 30%), linear-gradient(180deg, #0c1633 0%, #071126 100%);
+    color: var(--text);
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+header {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    padding: 1rem 2rem;
+    background: rgba(7, 17, 38, 0.95);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(12px);
+}
+
+header h1 {
+    margin: 0;
+    font-size: 1.3rem;
+    letter-spacing: 0.02em;
+}
+
+nav {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+nav a {
+    color: var(--text);
+    text-decoration: none;
+    font-weight: 600;
+    padding: 0.65rem 1rem;
+    border-radius: 999px;
+    transition: transform 0.2s ease, background-color 0.2s ease, color 0.2s ease;
+}
+
+nav a:hover {
+    transform: translateY(-1px);
+    background: rgba(255, 255, 255, 0.08);
+    color: var(--accent);
+}
+
+main {
+    width: min(1200px, calc(100% - 2rem));
+    margin: 2rem auto;
+    padding: 0;
+}
+
+section {
+    margin-bottom: 2rem;
+}
+
+.page-title {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.page-title h2 {
+    margin: 0;
+    font-size: clamp(1.8rem, 2.5vw, 2.4rem);
+}
+
+.courses,
+.subjects {
+    display: grid;
+    gap: 1.25rem;
+    grid-template-columns: repeat(4, 1fr);
+}
+
+.courses {
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+}
+
+.course-box,
+.subject-box {
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.04), rgba(255, 255, 255, 0.02));
+    border: 1px solid var(--border);
+    border-radius: 24px;
+    padding: 1.5rem;
+    min-height: 150px;
+    transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
+    box-shadow: var(--shadow);
+}
+
+.course-box:hover,
+.subject-box:hover {
+    transform: translateY(-4px);
+    border-color: rgba(91, 156, 255, 0.35);
+    box-shadow: 0 30px 80px rgba(12, 24, 67, 0.22);
+}
+
+.course-box h1,
+.course-box h3,
+.subject-box p {
+    margin: 0;
+}
+
+.course-box h1 {
+    font-size: 1.35rem;
+    margin-bottom: 0.65rem;
+}
+
+.course-box h3 {
+    font-size: 0.95rem;
+    color: var(--muted);
+}
+
+.subject-box p {
+    font-size: 0.98rem;
+    margin-bottom: 1rem;
+    color: var(--text);
+}
+
+.subject-box input[type='file'] {
+    width: 100%;
+    margin-top: 0.5rem;
+    color: var(--text);
+}
+
+.subject-box button {
+    margin-top: 0.8rem;
+    width: 100%;
+    background: var(--accent);
+    color: #071126;
+    border: none;
+    border-radius: 12px;
+    padding: 0.85rem 1rem;
+    cursor: pointer;
+    font-weight: 700;
+}
+
+.subject-box button:hover {
+    background: #3ba3ff;
+}
+
+.subject-box ul {
+    margin: 0.8rem 0 0;
+    padding-left: 1.1rem;
+    color: var(--muted);
+}
+
+.semester {
+    padding: 1.25rem;
+    background: rgba(255, 255, 255, 0.02);
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    border-radius: 24px;
+}
+
+.semester h3 {
+    margin-top: 0;
+    color: var(--text);
+    font-size: 1.1rem;
+}
+
+footer {
+    margin-top: 2rem;
+    padding: 2rem 1.5rem;
+    background: rgba(7, 17, 38, 0.95);
+    color: var(--muted);
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+    text-align: center;
+}
+
+footer p {
+    margin: 0.5rem 0;
+    line-height: 1.7;
+}
+
+footer a {
+    color: var(--accent);
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .page-title {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .courses,
+    .subjects {
+        grid-template-columns: 1fr;
+    }
+    .course-box,
+    .subject-box {
+        width: 100%;
+    }
+}

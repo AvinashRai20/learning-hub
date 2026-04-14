@@ -1,0 +1,84 @@
+:root {
+    --login-surface: rgba(17, 30, 58, 0.95);
+}
+
+body.auth-page {
+    background: radial-gradient(circle at top left, rgba(91, 156, 255, 0.12), transparent 30%), linear-gradient(180deg, #0a173b 0%, #071126 100%);
+}
+
+.login-panel {
+    width: min(620px, calc(100% - 2rem));
+    margin: 4rem auto 2rem;
+    padding: 2rem;
+    border-radius: 32px;
+    background: rgba(10, 18, 42, 0.92);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    box-shadow: 0 35px 90px rgba(0, 0, 0, 0.22);
+}
+
+.panel-header {
+    margin-bottom: 1.8rem;
+}
+
+.panel-header .eyebrow {
+    margin: 0 0 0.35rem;
+    color: #8daaff;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    font-size: 0.85rem;
+}
+
+.panel-header h2 {
+    margin: 0;
+    font-size: clamp(2rem, 2.3vw, 2.4rem);
+}
+
+.panel-header .subtitle {
+    margin: 1rem 0 0;
+    color: var(--muted);
+    line-height: 1.7;
+}
+
+.login-card {
+    padding: 1.8rem;
+    border-radius: 28px;
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.04), rgba(255, 255, 255, 0.02));
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.login-card label {
+    display: block;
+    margin-top: 1rem;
+    margin-bottom: 0.55rem;
+    font-weight: 600;
+}
+
+.login-card input {
+    width: 100%;
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: 16px;
+    padding: 0.95rem 1rem;
+    background: rgba(255, 255, 255, 0.05);
+    color: var(--text);
+}
+
+.login-card input:focus {
+    border-color: rgba(91, 156, 255, 0.7);
+    box-shadow: 0 0 0 4px rgba(91, 156, 255, 0.12);
+}
+
+.login-card .button {
+    margin-top: 1.5rem;
+}
+
+.login-message {
+    margin: 1.3rem 0 0;
+    color: var(--muted);
+    line-height: 1.7;
+}
+
+@media (max-width: 550px) {
+    .login-panel {
+        padding: 1.5rem;
+    }
+}
